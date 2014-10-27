@@ -38,8 +38,10 @@ mods.ic2.Compressor.addRecipe(threeX_compressedDirt, twoX_compressedDirt * 9);
 mods.ic2.Compressor.addRecipe(fourX_compressedDirt, threeX_compressedDirt * 9);
 mods.ic2.Compressor.addRecipe(oneX_compressedGravel, gravel * 9);
 mods.ic2.Compressor.addRecipe(twoX_compressedGravel, oneX_compressedGravel * 9);
+/* disable due to conflicts
 mods.ic2.Compressor.addRecipe(oneX_compressedSand, sand * 9);
 mods.ic2.Compressor.addRecipe(twoX_compressedSand, oneX_compressedSand * 9);
+*/
 
 mods.gregtech.ForgeHammer.addRecipe(<minecraft:cobblestone> * 9, oneX_compressedCobble, 200, 32);
 mods.gregtech.ForgeHammer.addRecipe(oneX_compressedCobble * 9, twoX_compressedCobble, 200, 32);

@@ -1,6 +1,6 @@
 var genEnder = <ExtraUtilities:generator:3>;
 var genFurnace = <ExtraUtilities:generator:1>;
-var genHeated = <ExtraUtitlies:generator:4>;
+var genHeated = <ExtraUtilities:generator:4>;
 var genHightemp = <ExtraUtilities:generator:10>;
 var genFood = <ExtraUtilities:generator:5>;
 var genLava = <ExtraUtilities:generator:2>;
@@ -37,9 +37,9 @@ var paneGlass = <ore:paneGlass>;
 
 #disable ender transmitter/receiver
 recipes.remove(transmitter);
-mods.nei.NEI.removeEntry(transmitter);
+mods.nei.NEI.hide(transmitter);
 recipes.remove(receiver);
-mods.nei.NEI.removeEntry(receiver);
+mods.nei.NEI.hide(receiver);
 
 
 # drums of steel
@@ -53,7 +53,7 @@ recipes.addShaped(drum, [
 #generators
 recipes.remove(genSurvival);
 recipes.addShaped(genSurvival, [
-  [cobble, cobble, cobble],
+  [cobblestone, cobblestone, cobblestone],
   [steel, piston, steel],
   [redstone, furnace, redstone]]);
 
@@ -72,7 +72,7 @@ recipes.addShaped(genLava, [
 recipes.remove(genEnder);
 recipes.addShaped(genEnder, [
   [enderEye, enderEye, enderEye],
-  [enderPearl, steelBlock, enderPearl],
+  [enderPearl, blockSteel, enderPearl],
   [redstone, furnace, redstone]]);
 
 recipes.remove(genHeated);
