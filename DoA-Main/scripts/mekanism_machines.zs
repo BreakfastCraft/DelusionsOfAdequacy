@@ -73,6 +73,7 @@ var windTurbine = <MekanismGenerators:Generator:6>;
 var solarPanel = <MekanismGenerators:SolarPanel>;
 var speedUpgrade = <Mekanism:SpeedUpgrade>;
 var solarGenerator = <MekanismGenerators:Generator:1>;
+var pcb = <PneumaticCraft:printedCircuitBoard>;
 
 
 #disable compressed carbon/etc
@@ -265,12 +266,16 @@ recipes.addShaped(speedUpgrade, [
   [null, glass, null]]);
 
 # basic circut: m. infuser redstone -> osmium
+mods.mekanism.Infuser.addRecipe("TIN", 10, pcb, <Mekanism:ControlCircuit>);
 
 # adv circut: 2 enriched alloy, 1 basic circut
+mods.mekanism.Infuser.addRecipe("REDSTONE", 100, <Mekanism:ControlCircuit> * 2, <Mekanism:ControlCircuit:1>);
 
 # elite circuit: 2 reinforced alloy, 1 adv circuit
+mods.mekanism.Infuser.addRecipe("DIAMOND", 25, <Mekanism:ControlCircuit:1> * 2, <Mekanism:ControlCircuit:2>);
 
 # ultimate circuit: 2 atomic alloy, 1 elite circuit
+mods.mekanism.Infuser.addRecipe("OBSIDIAN", 25, <Mekanism:ControlCircuit:2> * 2, <Mekanism:ControlCircuit:3>);
 
 # walky talkie: 3 steel, 1 basic circut, 1 osmium
 recipes.remove(walkieTalkie);
